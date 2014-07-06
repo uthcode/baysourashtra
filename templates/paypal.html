@@ -2,6 +2,8 @@
 {% block title %}PayPal{% endblock %}
 {% block content %}
 
+Thank you! Your response has been recorded.<br/>
+
 <table class="table table-striped table-bordered">
     <thead><tr><th>Section</th><th>Your Value</th></tr></thead>
     <tbody>
@@ -16,17 +18,22 @@
     </tbody>
 </table>
 
-Thank you! Your response has been recorded. <br/>
+<div class="jumbotron">
 
 Please pay USD <strong>{{total_food_cost}}</strong> upfront using Paypal button below.
-You can use your credit card even if you do not have a Paypal account. Please ensure to select the right order amount and quantity and pay the total.
 
 
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="W2828BE4GCFNE">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_xclick">
+    <input type="hidden" name="business" value="orsenthil@gmail.com">
+    <input type="hidden" name="item_name" value="Total Price for Lunch">
+    <input type="hidden" name="item_number" value="Sou2014">
+    <input type="hidden" name="currency_code" value="USD">
+    <input type="hidden" name="amount" value="{{total_food_cost}}">
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
+
+</div>
 
 {% endblock %}
