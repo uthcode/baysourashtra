@@ -24,6 +24,7 @@ class PersonHandler(webapp2.RequestHandler):
     total = total_veg_cost + total_non_veg_cost
 
     form_values = {
+      'id': email,
       'name':name,
       'spouse': spouse,
       'family': family,

@@ -2,7 +2,8 @@
 {% block title %}PayPal{% endblock %}
 {% block content %}
 
-Thank you! Your response has been recorded.<br/>
+Thank you! Your response has been recorded.<br/><br/>
+You can <a href="/">change your selection</a>, if you wish to.<br/><br/>
 
 <table class="table table-striped table-bordered">
     <thead><tr><th>Section</th><th>Your Value</th></tr></thead>
@@ -18,9 +19,14 @@ Thank you! Your response has been recorded.<br/>
     </tbody>
 </table>
 
+
+
+
+
+
 <div class="jumbotron">
 
-Please pay USD <strong>{{total_food_cost}}</strong> upfront using Paypal button below.
+Please pay USD <strong>{{total_food_cost}}</strong> upfront using Paypal button below.<br/><br/>
 
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
