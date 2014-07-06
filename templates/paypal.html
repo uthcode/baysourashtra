@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}PayPal{% endblock %}
+{% block content %}
+
+<table class="table table-striped table-bordered">
+    <thead><tr><th>Section</th><th>Your Value</th></tr></thead>
+    <tbody>
+        <tr><td>Name</td><td>{{name}}</td></tr>
+        <tr><td>Spouse</td><td>{{spouse}}</td></tr>
+        <tr><td>Family</td><td>{{family}}</td></tr>
+        <tr><td>Veg</td><td>{{veg}}</td></tr>
+        <tr><td>Non-Veg</td><td>{{nonveg}}</td></tr>
+    </tbody>
+</table>
+
+Thank you! Your response has been recorded. Please pay the amount upfront using Paypal.
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="W2828BE4GCFNE">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+{% endblock %}
