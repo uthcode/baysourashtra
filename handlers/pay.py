@@ -11,6 +11,10 @@ class PaypalHandler(webapp2.RequestHandler):
       'spouse': person.spouse,
       'family': person.family,
       'veg': person.veg,
-      'nonveg': person.nonveg
+      'total_veg_cost': person.total_veg_cost,
+      'nonveg': person.nonveg,
+      'total_non_veg_cost': person.total_non_veg_cost,
+      'total_food_cost': person.total
     }
+
     self.response.write(pay_template.render(values))

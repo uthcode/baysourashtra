@@ -1,5 +1,8 @@
 import jinja2
 
+veg_cost = 5.90
+non_veg_cost = 6.40
+
 JINJA_ENVIRONMENT = jinja2.Environment(
   # templates directory is relative to app root.
   loader=jinja2.FileSystemLoader('templates'),

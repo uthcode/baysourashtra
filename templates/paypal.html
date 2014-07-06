@@ -9,11 +9,18 @@
         <tr><td>Spouse</td><td>{{spouse}}</td></tr>
         <tr><td>Family</td><td>{{family}}</td></tr>
         <tr><td>Veg</td><td>{{veg}}</td></tr>
+        <tr><td>Total Veg Cost</td><td>{{total_veg_cost}}</td></tr>
         <tr><td>Non-Veg</td><td>{{nonveg}}</td></tr>
+        <tr><td>Total Non Veg Cost</td><td>{{total_non_veg_cost}}</td></tr>
+        <tr><td><strong>Total Food Cost</strong></td><td><strong>{{total_food_cost}}</strong></td></tr>
     </tbody>
 </table>
 
-Thank you! Your response has been recorded. Please pay the amount upfront using Paypal.
+Thank you! Your response has been recorded. <br/>
+
+Please pay USD <strong>{{total_food_cost}}</strong> upfront using Paypal button below.
+You can use your credit card even if you do not have a Paypal account. Please ensure to select the right order amount and quantity and pay the total.
+
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick">
