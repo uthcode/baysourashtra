@@ -12,3 +12,4 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 form_template = JINJA_ENVIRONMENT.get_template('form.html')
 pay_template = JINJA_ENVIRONMENT.get_template('paypal.html')
 thankyou_template = JINJA_ENVIRONMENT.get_template('thankyou.html')
+cancel_template = JINJA_ENVIRONMENT.get_template('cancel.html')

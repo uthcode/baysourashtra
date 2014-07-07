@@ -14,7 +14,8 @@ class PaypalHandler(webapp2.RequestHandler):
       'total_veg_cost': person.total_veg_cost,
       'nonveg': person.nonveg,
       'total_non_veg_cost': person.total_non_veg_cost,
-      'total_food_cost': person.total
+      'total_food_cost': person.total,
+      'email': person.email
     }
 
     self.response.write(pay_template.render(values))

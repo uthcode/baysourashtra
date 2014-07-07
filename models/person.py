@@ -10,4 +10,5 @@ class PersonEntityClass(ndb.Model):
   total_veg_cost = ndb.FloatProperty(default=0.0)
   total_non_veg_cost = ndb.FloatProperty(default=0.0)
   total = ndb.FloatProperty(default=0.0)
+  paid = ndb.BooleanProperty(default=False)
 
