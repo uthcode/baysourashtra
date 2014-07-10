@@ -44,7 +44,16 @@
             </div>
         </div>
 
-        <!-- Select Basic -->
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="help"></label>
+            <div class="col-md-4">
+                <input id="helptxt" name="help" type="hidden" placeholder="" class="form-control input-md" required="">
+                <span class="help-block">The cost of one lunch box is ${{non_veg_cost}} USD. Cost includes cost of cold water, cool drinks, snacks, transportation charges, etc. Please order the amount for your family.</span>
+            </div>
+        </div>
+
+
         <div class="form-group">
             <label class="col-md-4 control-label" for="veg">Veg Lunch Boxes</label>
             <div class="col-md-4">
@@ -62,7 +71,6 @@
                     <option value="10">10</option>
                 </select>
             </div>
-            <span class="help-block">Cost of one Veg Lunch box is ${{veg_cost}}</span>
         </div>
 
         <!-- Select Basic -->
@@ -83,7 +91,6 @@
                     <option value="10">10</option>
                 </select>
             </div>
-            <span class="help-block">Cost of one Non-Veg Lunch box is ${{non_veg_cost}}</span>
         </div>
 
         <!-- Button -->
