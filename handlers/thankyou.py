@@ -12,4 +12,7 @@ class ThankyouHandler(webapp2.RequestHandler):
         person.paid = True
         person.put()
         self.response.write(thankyou_template.render())
-    self.response.write(cancel_template.render())
+      else:
+        self.response.write(cancel_template.render())
+    else:
+      self.response.write(cancel_template.render())
