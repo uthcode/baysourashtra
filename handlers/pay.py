@@ -23,7 +23,7 @@ class PaypalHandler(webapp2.RequestHandler):
           'email': person.email
         }
         self.response.write(pay_template.render(values))
-        send_email(values)
+        send_email(**values)
       else:
         self.response.write(cancel_template.render())
     else:
