@@ -26,7 +26,7 @@ Bay Area Sourashtra Picnic Organizers
 def send_email(**kwargs):
   message = mail.EmailMessage(sender="Bay Area Sourashtra Group <baysourashtra@baysourashtra.appspotmail.com>",
                               reply_to="sourashtraevents@gmail.com",
-                              bcc="orsenthil+baysourashtra@gmail.com",
+                              bcc=["orsenthil+baysourashtra@gmail.com","sourashtraevents@gmail.com"],
                               subject="Thanks for ordering for Sourashtra Picnic!")
   message.to = kwargs['email']
   message.body = message_body_template % kwargs
