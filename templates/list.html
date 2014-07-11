@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}List of Users who have registered{% endblock %}
+{% block content %}
+
+<br/><br/>
+
+Following are the list of users who have registered.
+
+
+<table class="table table-striped table-bordered">
+    <thead><tr><th>Name</th><th>Family</th><th>Total</th></tr></thead>
+    <tbody>
+    {% for record in allrecords %}
+    <tr><td>record.name</td><td>record.family</td><td>record.total_food_cost</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</div>
+
+{% endblock %}
