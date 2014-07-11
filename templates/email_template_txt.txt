@@ -1,0 +1,16 @@
+Dear {{name}},
+
+Thank you for registering for the event. Here is your submission details.
+Once you pay using our site, your payment record will be updated.
+
+Name: {{name}}
+Spouse: {{spouse}}
+Family: {{family}}
+Veg: {{veg}}
+Total Veg Cost: {{total_veg_cost}}
+Non-Veg: {{nonveg}}
+Total Non Veg Cost: {{total_non_veg_cost}}
+Total Food Cost: {{total_food_cost}}
+
+Thank you,
+Bay Area Sourashtra Picnic Organizers

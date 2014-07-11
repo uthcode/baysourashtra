@@ -1,7 +1,8 @@
 import webapp2
 from models.person import PersonEntityClass
 
-from utils import pay_template, form_template, cancel_template
+from utils import pay_template, form_template, cancel_template, email_template
+from utils.email import send_email
 
 
 class PaypalHandler(webapp2.RequestHandler):
@@ -22,6 +23,7 @@ class PaypalHandler(webapp2.RequestHandler):
           'email': person.email
         }
         self.response.write(pay_template.render(values))
+        send_email(values)
       else:
         self.response.write(cancel_template.render())
     else:

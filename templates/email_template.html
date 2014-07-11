@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Thanks for registering.{% endblock %}
+{% block content %}
+
+Dear {{name}},
+
+Thank you for registering for the event. Here is your submission details.
+Once you pay using our site, your payment record will be updated.
+
+
+<table class="table table-striped table-bordered">
+    <thead><tr><th>Section</th><th>Your Value</th></tr></thead>
+    <tbody>
+    <tr><td>Name</td><td>{{name}}</td></tr>
+    <tr><td>Spouse</td><td>{{spouse}}</td></tr>
+    <tr><td>Family</td><td>{{family}}</td></tr>
+    <tr><td>Veg</td><td>{{veg}}</td></tr>
+    <tr><td>Total Veg Cost</td><td>{{total_veg_cost}}</td></tr>
+    <tr><td>Non-Veg</td><td>{{nonveg}}</td></tr>
+    <tr><td>Total Non Veg Cost</td><td>{{total_non_veg_cost}}</td></tr>
+    <tr><td><strong>Total Food Cost</strong></td><td><strong>{{total_food_cost}}</strong></td></tr>
+    </tbody>
+</table>
+
+Thank you,
+Bay Area Sourashtra Picnic Organizers
+
+</div>
+
+{% endblock %}
