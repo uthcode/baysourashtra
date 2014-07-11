@@ -1,7 +1,7 @@
 import webapp2
 from models.person import PersonEntityClass
 
-from utils import pay_template, form_template, cancel_template, email_template
+from utils import pay_template, form_template, cancel_template, email_template, thankyou_template
 from utils.email import send_email
 
 

@@ -16,7 +16,7 @@ class PersonHandler(webapp2.RequestHandler):
     name = self.request.get("name")
     spouse = self.request.get("spouse")
     family = self.request.get("family")
-    email = self.request.get("email")
+    email = self.request.get("email").lower()
     veg = int(self.request.get("veg", 0))
     nonveg = int(self.request.get("nonveg", 0))
     total_veg_cost = veg * veg_cost
@@ -35,6 +35,10 @@ class PersonHandler(webapp2.RequestHandler):
       'total_non_veg_cost': total_non_veg_cost,
       'total': total,
     }
-    person_entity = PersonEntityClass(**form_values)
-    person_entity.put()
-    self.redirect('/pay/%s' % email)
+    person_query = PersonEntityClass.query(PersonEntityClass.email==email)
+    if person_query.count() and person_query.fetch()[0].paid:
+      self.redirect('/thanks/%s' % email)
+    else:
+      person_entity = PersonEntityClass(**form_values)
+      person_entity.put()
+      self.redirect('/pay/%s' % email)
