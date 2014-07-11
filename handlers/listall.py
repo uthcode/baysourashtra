@@ -6,6 +6,6 @@ class ListAllHandler(webapp2.RequestHandler):
   def get(self):
     person_query = PersonEntityClass.query().fetch()
     values = {
-      'all': person_query
+      'allrecords': person_query
     }
     self.response.write(list_template.render(values))
