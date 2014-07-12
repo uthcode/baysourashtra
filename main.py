@@ -1,7 +1,7 @@
 import webapp2
 
 from handlers import PersonHandler, PaypalHandler, ThankyouHandler, CancelHandler, StepbyStepHandler, \
-  ListAllHandler
+  ListAllHandler, IndexHandler
 
 app = webapp2.WSGIApplication(
   [('/', PersonHandler),
@@ -9,6 +9,7 @@ app = webapp2.WSGIApplication(
    ('/thanks/(.*)', ThankyouHandler),
    ('/cancel', CancelHandler),
    ('/stepbystep', StepbyStepHandler),
-   ('/list', ListAllHandler)
+   ('/list', ListAllHandler),
+   ('/index', IndexHandler)
   ],
   debug=True)
