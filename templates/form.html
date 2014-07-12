@@ -1,107 +1,130 @@
 {% extends "base.html" %}
 {% block title %}Registration{% endblock %}
+
+
+{% block header %}
+<!-- Full Page Image Header Area -->
+<div id="top" class="header">
+    <div class="vert-text">
+        <h1>Bay Area Sourashtra Picnic</h1>
+        <h3>
+            <em>July 20,2014</em>
+        </h3>
+
+        <a href="#orderform" class="btn btn-default btn-lg">Order your Lunch Boxes</a>
+    </div>
+</div>
+{% endblock %}
+<!-- /Full Page Image Header Area -->
+
 {% block content %}
 
-<form action="/" method="post" class="form-horizontal">
-    <fieldset>
+<!-- Call to Action -->
+<div id="orderform" class="services">
+    <div class="container">
+        <form action="/" method="post" class="form-horizontal">
+            <fieldset>
 
-        <!-- Form Name -->
-        <legend>Bay Area Sourashtra Picnic - Lunch Order</legend>
+                <!-- Form Name -->
+                <legend>Bay Area Sourashtra Picnic - Lunch Order</legend>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="name">Name</label>
-            <div class="col-md-4">
-                <input id="name" name="name" type="text" placeholder="Ayyan Naau" class="form-control input-md" required="">
-                <span class="help-block">e.g. Venkatesh</span>
-            </div>
-        </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="name">Name</label>
+                    <div class="col-md-4">
+                        <input id="name" name="name" type="text" placeholder="Ayyan Naau" class="form-control input-md" required="">
+                        <span class="help-block">e.g. Venkatesh</span>
+                    </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="spouse">Spouse Name</label>
-            <div class="col-md-4">
-                <input id="spouse" name="spouse" type="text" placeholder="Amman Naau" class="form-control input-md">
-                <span class="help-block">e.g. Shanmuga Priya</span>
-            </div>
-        </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="spouse">Spouse Name</label>
+                    <div class="col-md-4">
+                        <input id="spouse" name="spouse" type="text" placeholder="Amman Naau" class="form-control input-md">
+                        <span class="help-block">e.g. Shanmuga Priya</span>
+                    </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="family">Family Name</label>
-            <div class="col-md-4">
-                <input id="family" name="family" type="text" placeholder="Gher Naau" class="form-control input-md" required="">
-                <span class="help-block">e.g. Appiah</span>
-            </div>
-        </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="family">Family Name</label>
+                    <div class="col-md-4">
+                        <input id="family" name="family" type="text" placeholder="Gher Naau" class="form-control input-md" required="">
+                        <span class="help-block">e.g. Appiah</span>
+                    </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="email">Email</label>
-            <div class="col-md-4">
-                <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
-                <span class="help-block">email you used in the evite so that we can match your order</span>
-            </div>
-        </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Email</label>
+                    <div class="col-md-4">
+                        <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
+                        <span class="help-block">email you used in the evite so that we can match your order</span>
+                    </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="help"></label>
-            <div class="col-md-4">
-                <input id="helptxt" name="help" type="hidden" placeholder="" class="form-control input-md" required="">
-                <span class="help-block">The cost of one lunch box is ${{non_veg_cost}} USD. Cost includes cost of cold water, cool drinks, snacks and other charges, etc. Please order the amount for your family.</span>
-            </div>
-        </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="help"></label>
+                    <div class="col-md-4">
+                        <input id="helptxt" name="help" type="hidden" placeholder="" class="form-control input-md" required="">
+                        <span class="help-block"><em>The cost of one lunch box is ${{non_veg_cost}} USD. Cost includes cost of cold water, cool drinks, snacks and other charges, etc. Please order the amount for your family.</em></span>
+                    </div>
+                </div>
 
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="veg">Veg Lunch Boxes</label>
-            <div class="col-md-4">
-                <select id="veg" name="veg" class="form-control">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
-        </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="veg">Veg Lunch Boxes</label>
+                    <div class="col-md-4">
+                        <select id="veg" name="veg" class="form-control">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
 
-        <!-- Select Basic -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="nonveg">Non Veg Lunch Boxes</label>
-            <div class="col-md-4">
-                <select id="nonveg" name="nonveg" class="form-control">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
-        </div>
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nonveg">Non Veg Lunch Boxes</label>
+                    <div class="col-md-4">
+                        <select id="nonveg" name="nonveg" class="form-control">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
 
-        <!-- Button -->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="submit"></label>
-            <div class="col-md-4">
-                <button id="submit" name="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
 
-    </fieldset>
-</form>
+            </fieldset>
+        </form>
 
+    </div>
+</div>
 {% endblock %}
+<!-- /Call to Action -->

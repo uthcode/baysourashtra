@@ -5,7 +5,7 @@
     {% block head %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/styles/favicon.ico">
@@ -29,20 +29,84 @@
     <link href="/static/css/stylish-portfolio.css" rel="stylesheet">
     <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- Add custom CSS here -->
+    <link href="/static/css/stylish-portfolio.css" rel="stylesheet">
+    <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <title>{% block title %}{% endblock %} - Bay Area Sourashtra</title>
     {% endblock %}
 </head>
 <body>
 
-<div class="container">
-    <div class="header">
-        <h3 class="text-muted">Bay Area Sourashtra Picnic 2014</h3>
-    </div>
+<!-- Side Menu -->
+<a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <li><a href="#contact">Map of Location</a>
+        </li>
+    </ul>
+</div>
+<!-- /Side Menu -->
 
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div class="footer">
-        <p>&copy; Uthcode 2014</p>
-    </div>
-</div> <!-- /container -->
+{% block header %} {% endblock %}
+
+<!-- content -->
+{% block content %} {% endblock %}
+<!-- /content -->
+
+<!-- Map -->
+<div id="contact" class="map">
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lake+Chabot+Regional+Park,17600+Lake+Chabot+Rd,Castro+Valley,CA+94546&amp;aq=0&amp;output=embed"></iframe>
+    <br />
+    <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lake+Chabot+Regional+Park,17600+Lake+Chabot+Rd,Castro+Valley,CA+94546"></a>
+    </small>
+    </iframe>
+</div>
+<!-- /Map -->
+
+<!-- copyright -->
+
+<div class="services">
+<div class="footer">
+    <p>&copy; Uthcode 2014</p>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script src="/static/js/jquery-1.10.2.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+
+<!-- Custom JavaScript for the Side Menu and Smooth Scrolling -->
+<script>
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+</script>
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+</script>
+<script>
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
 
 </body>
