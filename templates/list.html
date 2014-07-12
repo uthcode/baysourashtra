@@ -13,6 +13,9 @@ Payment details will be updated regularly.
     {% for record in allrecords %}
     <tr><td>{{record.name}}</td><td>{{record.family}}</td><td>{{record.veg}}</td><td>{{record.nonveg}}</td><td>{{record.total}}</td><td>{{record.paid}}</td></tr>
     {% endfor %}
+    <tfoot>
+    <tr><td><strong>Total Families: {{total_registered}}</strong></td><td>-</td><td><strong>{{total_veg}}</strong></td><td><strong>{{total_nonveg}}</strong></td><td><strong>{{total_payment}}</strong></td><td><strong>Received: {{total_received}}</strong></td></tr>
+    </tfoot>
     </tbody>
 </table>
 
