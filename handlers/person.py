@@ -1,7 +1,7 @@
 import webapp2
 
 from models.person import PersonEntityClass
-from utils import form_template, veg_cost, non_veg_cost
+from utils import form_template, veg_cost, non_veg_cost, thankyou_template
 
 
 class PersonHandler(webapp2.RequestHandler):
@@ -13,6 +13,9 @@ class PersonHandler(webapp2.RequestHandler):
     self.response.write(form_template.render(values))
 
   def post(self):
+    self.redirect("/thanks/")
+
+  def _post(self):
     name = self.request.get("name")
     spouse = self.request.get("spouse")
     family = self.request.get("family")
@@ -36,6 +39,7 @@ class PersonHandler(webapp2.RequestHandler):
       'total': total,
     }
     person_query = PersonEntityClass.query(PersonEntityClass.email==email)
+
     if person_query.count() and person_query.fetch()[0].paid:
       self.redirect('/thanks/%s' % email)
     else:
