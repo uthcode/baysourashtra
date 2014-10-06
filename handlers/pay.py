@@ -1,5 +1,5 @@
 import webapp2
-from models.person import PersonEntityClass
+from models.person import PersonEntityClassDiwali2014
 
 from utils import pay_template, form_template, cancel_template, email_template, thankyou_template
 from utils.email import send_email
@@ -8,7 +8,7 @@ from utils.email import send_email
 class PaypalHandler(webapp2.RequestHandler):
   def get(self, email):
     if email:
-      person_query = PersonEntityClass.query(PersonEntityClass.email==email)
+      person_query = PersonEntityClassDiwali2014.query(PersonEntityClassDiwali2014.email==email)
       if person_query.count():
         person = person_query.fetch()[0]
         values = {
