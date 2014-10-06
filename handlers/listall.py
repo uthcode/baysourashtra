@@ -10,8 +10,10 @@ class ListAllHandler(webapp2.RequestHandler):
       'total_registered': len(person_query),
       'total_veg' : sum([p.veg for p in person_query]),
       'total_nonveg' : sum([p.nonveg for p in person_query]),
+      'total_adults' : sum([p.adults for p in person_query]),
+      'total_kids' : sum([p.kids for p in person_query]),
       'total_payment': sum([p.total for p in person_query]),
-      'total_received': sum([p.total for p in person_query if p.paid])
+      'total_received': sum([p.total for p in person_query if p.paid]),
     }
 
     self.response.write(list_template.render(values))

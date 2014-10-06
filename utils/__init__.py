@@ -2,6 +2,8 @@ import jinja2
 
 veg_cost = 10.00
 non_veg_cost = 10.00
+adults_cost = 22.00
+kids_cost = 14.00
 
 JINJA_ENVIRONMENT = jinja2.Environment(
   # templates directory is relative to app root.

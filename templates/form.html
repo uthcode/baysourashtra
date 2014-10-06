@@ -6,14 +6,14 @@
 <!-- Full Page Image Header Area -->
 <div id="top" class="header">
     <div class="vert-text">
-        <h1>Bay Area Sourashtra Picnic</h1>
+        <h1>Bay Area Sourashtra</h1>
+        <h2><em>Diwali Gathering 2014</em></h2>
         <h3>
-            <em>July 20,2014</em><br/>
-            <em>Lake Chabot Regional Park</em><br/>
-            <em>Registration is Over. You can still join us, but bring your own lunch.</em>
+            <em>October 26,2014, 12:00 PM to 05:00 PM</em><br/>
+            <em>Golden Peacock Banquet, Hayward, CA 94544</em><br/>
         </h3>
 
-        <!-- <a href="#orderform" class="btn btn-default btn-lg">Order your Lunch Boxes</a> -->
+        <a href="#orderform" class="btn btn-default btn-lg">Order now</a>
     </div>
 </div>
 {% endblock %}
@@ -28,7 +28,7 @@
             <fieldset>
 
                 <!-- Form Name -->
-                <legend>Bay Area Sourashtra Picnic - Lunch Order</legend>
+                <legend>Bay Area Sourashtra Diwali Gathering 2014</legend>
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -71,15 +71,15 @@
                     <label class="col-md-4 control-label" for="help"></label>
                     <div class="col-md-4">
                         <input id="helptxt" name="help" type="hidden" placeholder="" class="form-control input-md" required="">
-                        <span class="help-block"><em>The cost of one lunch box is ${{non_veg_cost}} USD. Cost includes cost of cold water, cool drinks, snacks and other charges, etc. Please order the amount for your family.</em></span>
+                        <span class="help-block"><em>General Ticket price is ${{adults_cost}} USD for everyone, boys, girls, teens, young at heart adults. Kids between 5 to 10 have special cost ${{kids_cost}} USD.</em></span>
                     </div>
                 </div>
 
 
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="veg">Veg Lunch Boxes</label>
+                    <label class="col-md-4 control-label" for="adults">General Ticket (Age 10 and above)</label>
                     <div class="col-md-4">
-                        <select id="veg" name="veg" class="form-control">
+                        <select id="adults" name="adults" class="form-control">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -97,9 +97,9 @@
 
                 <!-- Select Basic -->
                 <div class="form-group">
-                    <label class="col-md-4 control-label" for="nonveg">Non Veg Lunch Boxes</label>
+                    <label class="col-md-4 control-label" for="kids">Kids (Aged 5 to 10)</label>
                     <div class="col-md-4">
-                        <select id="nonveg" name="nonveg" class="form-control">
+                        <select id="kids" name="kids" class="form-control">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>

@@ -13,10 +13,10 @@ Once you pay using our site, your payment record will be updated.
 Name: %(name)s
 Spouse: %(spouse)s
 Family: %(family)s
-Veg: %(veg)s
-Total Veg Cost: %(total_veg_cost)s
-Non-Veg: %(nonveg)s
-Total Non Veg Cost: %(total_non_veg_cost)s
+Adults: %(adults)s
+Total Adults Cost: %(total_adults_cost)s
+Kids: %(nonveg)s
+Total Kids Cost: %(total_kids_cost)s
 Total Food Cost: %(total_food_cost)s
 
 Thank you,

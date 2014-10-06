@@ -12,4 +12,8 @@ class PersonEntityClass(ndb.Model):
   total = ndb.FloatProperty(default=0.0)
   paid = ndb.BooleanProperty(default=False)
   email_sent = ndb.BooleanProperty(default=False)
+  adults = ndb.IntegerProperty(default=0)
+  kids = ndb.IntegerProperty(default=0)
+  adults_cost = ndb.FloatProperty(default=0.0)
+  kids_cost = ndb.FloatProperty(default=0.0)
 
