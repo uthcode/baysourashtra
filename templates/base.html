@@ -38,6 +38,7 @@
 </head>
 <body>
 
+{% block sidemenu %}
 <!-- Side Menu -->
 <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
 <div id="sidebar-wrapper">
@@ -48,6 +49,7 @@
     </ul>
 </div>
 <!-- /Side Menu -->
+{% endblock %}
 
 {% block header %} {% endblock %}
 
@@ -60,7 +62,7 @@
 <div id="flyer" class="services">
     <div class="row">
       <div class="span4"></div>
-      <div class="span4"><img src="/static/diwali2014.jpg" class="img-responsive center-block"/></div>
+      <div class="span4"><img src="http://baysourashtra.appspot.com/static/diwali2014.jpg" class="img-responsive center-block"/></div>
       <div class="span4"></div>
     </div>
 </div>
