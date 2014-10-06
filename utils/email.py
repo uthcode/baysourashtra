@@ -15,7 +15,7 @@ Spouse: %(spouse)s
 Family: %(family)s
 Adults: %(adults)s
 Total Adults Cost: %(total_adults_cost)s
-Kids: %(nonveg)s
+Kids: %(kids)s
 Total Kids Cost: %(total_kids_cost)s
 Total Food Cost: %(total_food_cost)s
 

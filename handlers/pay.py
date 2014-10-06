@@ -15,12 +15,10 @@ class PaypalHandler(webapp2.RequestHandler):
           'name': person.name,
           'spouse': person.spouse,
           'family': person.family,
-          'veg': person.veg,
-          'total_veg_cost': person.total_veg_cost,
-          'nonveg': person.nonveg,
-          'total_non_veg_cost': person.total_non_veg_cost,
           'adults': person.adults,
           'kids': person.kids,
+          'total_adults_cost': person.total_adults_cost,
+          'total_kids_cost': person.total_kids_cost,
           'total_food_cost': person.total,
           'email': person.email
         }

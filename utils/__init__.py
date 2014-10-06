@@ -5,11 +5,18 @@ non_veg_cost = 10.00
 adults_cost = 22.00
 kids_cost = 14.00
 
+def format_currency(value):
+    return "${:,.2f}".format(value)
+
 JINJA_ENVIRONMENT = jinja2.Environment(
   # templates directory is relative to app root.
   loader=jinja2.FileSystemLoader('templates'),
   extensions=['jinja2.ext.autoescape'],
   autoescape=True)
+
+JINJA_ENVIRONMENT.filters.update(
+    {'format_currency': format_currency}
+)
 
 form_template = JINJA_ENVIRONMENT.get_template('form.html')
 pay_template = JINJA_ENVIRONMENT.get_template('paypal.html')

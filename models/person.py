@@ -9,11 +9,12 @@ class PersonEntityClass(ndb.Model):
   nonveg = ndb.IntegerProperty(default=0)
   total_veg_cost = ndb.FloatProperty(default=0.0)
   total_non_veg_cost = ndb.FloatProperty(default=0.0)
+  adults = ndb.IntegerProperty(default=0)
+  kids = ndb.IntegerProperty(default=0)
+  total_adults_cost = ndb.FloatProperty(default=0.0)
+  total_kids_cost = ndb.FloatProperty(default=0.0)
   total = ndb.FloatProperty(default=0.0)
   paid = ndb.BooleanProperty(default=False)
   email_sent = ndb.BooleanProperty(default=False)
-  adults = ndb.IntegerProperty(default=0)
-  kids = ndb.IntegerProperty(default=0)
-  adults_cost = ndb.FloatProperty(default=0.0)
-  kids_cost = ndb.FloatProperty(default=0.0)
+
 

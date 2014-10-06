@@ -10,13 +10,13 @@ Following members have registered for picnic using the list.
 Payment details will be updated regularly.
 
 <table class="table table-striped table-bordered">
-    <thead><tr><th>Name</th><th>Family</th><th>Veg Boxes</th><th>Non Veg Boxes</th><th>Total Cost</th><th>Paid</th></tr></thead>
+    <thead><tr><th>Name</th><th>Family</th><th>Adults</th><th>Kids</th><th>Total Cost</th><th>Paid</th></tr></thead>
     <tbody>
     {% for record in allrecords %}
-    <tr><td>{{record.name}}</td><td>{{record.family}}</td><td>{{record.veg}}</td><td>{{record.nonveg}}</td><td>{{record.total}}</td><td>{{record.paid}}</td></tr>
+    <tr><td>{{record.name}}</td><td>{{record.family}}</td><td>{{record.adults}}</td><td>{{record.kids}}</td><td>{{record.total}}</td><td>{{record.paid}}</td></tr>
     {% endfor %}
     <tfoot>
-    <tr><td><strong>Total Families: {{total_registered}}</strong></td><td>-</td><td><strong>{{total_veg}}</strong></td><td><strong>{{total_nonveg}}</strong></td><td><strong>{{total_payment}}</strong></td><td><strong>Received: {{total_received}}</strong></td></tr>
+    <tr><td><strong>Total Families: {{total_registered}}</strong></td><td>-</td><td><strong>{{total_adults}}</strong></td><td><strong>{{total_kids}}</strong></td><td><strong>{{total_payment}}</strong></td><td><strong>Received: {{total_received}}</strong></td></tr>
     </tfoot>
     </tbody>
 </table>

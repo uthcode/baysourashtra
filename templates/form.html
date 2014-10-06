@@ -13,7 +13,7 @@
             <em>Golden Peacock Banquet, Hayward, CA 94544</em><br/>
         </h3>
 
-        <a href="#orderform" class="btn btn-default btn-lg">Order now</a>
+        <a href="#orderform" class="btn btn-success btn-lg">Please Pay Now</a>
     </div>
 </div>
 {% endblock %}
@@ -71,7 +71,7 @@
                     <label class="col-md-4 control-label" for="help"></label>
                     <div class="col-md-4">
                         <input id="helptxt" name="help" type="hidden" placeholder="" class="form-control input-md" required="">
-                        <span class="help-block"><em>General Ticket price is ${{adults_cost}} USD for everyone, boys, girls, teens, young at heart adults. Kids between 5 to 10 have special cost ${{kids_cost}} USD.</em></span>
+                        <span class="help-block"><em>General Ticket price is {{adults_cost|format_currency}} USD for everyone, boys, girls, teens, young at heart adults etc. Kids between 5 to 10 have special cost {{kids_cost|format_currency}} USD.</em></span>
                     </div>
                 </div>
 
