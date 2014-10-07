@@ -10,6 +10,7 @@ body {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  color: #fffb56;
 }
 
 .vert-text h1 {
@@ -111,7 +112,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(/static/img/bg.jpg) no-repeat center center fixed; 
+  background: url(/static/img/happydiwali.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -127,7 +128,7 @@ body {
 /* Services */
 
 .services {
-  background: #7fbbda;
+  background: #2f2b1f;
   padding: 50px 0;
   color: #ffffff;
 }
