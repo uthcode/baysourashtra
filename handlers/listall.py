@@ -4,7 +4,7 @@ from utils import list_template
 
 class ListAllHandler(webapp2.RequestHandler):
   def get(self):
-    person_query = PersonEntityClassDiwali2014.query().fetch()
+    person_query = PersonEntityClassDiwali2014.query().order().fetch()
     values = {
       'allrecords': person_query,
       'total_registered': len(person_query),

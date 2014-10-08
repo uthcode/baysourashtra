@@ -16,5 +16,6 @@ class PersonEntityClassDiwali2014(ndb.Model):
   total = ndb.FloatProperty(default=0.0)
   paid = ndb.BooleanProperty(default=False)
   email_sent = ndb.BooleanProperty(default=False)
+  created = ndb.DateTimeProperty(auto_now_add=True)
 
 
