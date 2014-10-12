@@ -16,7 +16,7 @@ Payment details will be updated regularly.
     <tr><td>{{record.name}}</td><td>{{record.family}}</td><td>{{record.adults}}</td><td>{{record.kids}}</td><td>{{record.total}}</td><td>{{record.paid}}</td></tr>
     {% endfor %}
     <tfoot>
-    <tr><td><strong>Total Families: {{total_registered}}</strong></td><td>-</td><td><strong>{{total_adults}}</strong></td><td><strong>{{total_kids}}</strong></td><td><strong>{{total_payment}}</strong></td><td><strong>Received: {{total_received}}</strong></td></tr>
+    <tr><td><strong>Total Families: {{total_registered}}</strong></td><td>-</td><td><strong>{{total_adults}}</strong></td><td><strong>{{total_kids}}</strong></td><td><strong>{{total_payment}}</strong></td><td><strong>Received: {{total_received}}/Net: {{net_received|format_currency}}</strong></td></tr>
     </tfoot>
     </tbody>
 </table>

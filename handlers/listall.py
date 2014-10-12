@@ -12,6 +12,7 @@ class ListAllHandler(webapp2.RequestHandler):
       'total_kids': sum([p.kids for p in person_query]),
       'total_payment': sum([p.total for p in person_query]),
       'total_received': sum([p.total for p in person_query if p.paid]),
+      'net_received': sum([(p.total - (0.029 * p.total) - 0.30) for p in person_query if p.paid])
     }
 
     self.response.write(list_template.render(values))
