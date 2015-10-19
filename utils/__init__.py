@@ -2,8 +2,8 @@ import jinja2
 
 veg_cost = 10.00
 non_veg_cost = 10.00
-adults_cost = 22.00
-kids_cost = 14.00
+adults_cost = 21.00
+kids_cost = 13.00
 
 def format_currency(value):
     return "${:,.2f}".format(value)
