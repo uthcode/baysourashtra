@@ -7,3 +7,4 @@ from .cancel import CancelHandler
 from .stepbystep import StepbyStepHandler
 from .listall import ListAllHandler
 from .index import IndexHandler
+from .games import GamesHandler
