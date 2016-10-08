@@ -1,6 +1,6 @@
 from google.appengine.ext import ndb
 
-class PersonEntityClassDiwali2015(ndb.Model):
+class PersonEntityClassDiwali2016(ndb.Model):
   name = ndb.StringProperty(required=True)
   spouse = ndb.StringProperty(required=False)
   family = ndb.StringProperty(required=True)

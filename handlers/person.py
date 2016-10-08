@@ -1,6 +1,6 @@
 import webapp2
 
-from models.person import PersonEntityClassDiwali2015
+from models.person import PersonEntityClassDiwali2016
 from utils import form_template, adults_cost, kids_cost
 
 
@@ -35,11 +35,11 @@ class PersonHandler(webapp2.RequestHandler):
       'total_kids_cost': total_kids_cost,
       'total': total,
     }
-    person_query = PersonEntityClassDiwali2015.query(PersonEntityClassDiwali2015.email==email)
+    person_query = PersonEntityClassDiwali2016.query(PersonEntityClassDiwali2016.email == email)
 
     if person_query.count() and person_query.fetch()[0].paid:
       self.redirect('/thanks/%s' % email)
     else:
-      person_entity = PersonEntityClassDiwali2015(**form_values)
+      person_entity = PersonEntityClassDiwali2016(**form_values)
       person_entity.put()
       self.redirect('/pay/%s' % email)
