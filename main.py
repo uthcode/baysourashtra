@@ -10,7 +10,6 @@ app = webapp2.WSGIApplication(
    ('/cancel', CancelHandler),
    ('/stepbystep', StepbyStepHandler),
    ('/list', ListAllHandler),
-   ('/index', IndexHandler),
-   ('/games', GamesHandler)
+   ('/index', IndexHandler)
   ],
   debug=True)
