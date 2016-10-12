@@ -1,4 +1,4 @@
-__all__ = ['PaypalHandler', 'PersonHandler', 'ThankyouHandler', 'CancelHandler', 'StepbyStepHandler', 'ListAllHandler', 'IndexHandler']
+__all__ = ['PaypalHandler', 'PersonHandler', 'ThankyouHandler', 'CancelHandler', 'StepbyStepHandler', 'ListAllHandler', 'IndexHandler', 'PayPalBalanceHandler']
 
 from .person import PersonHandler
 from .pay import PaypalHandler
@@ -8,3 +8,4 @@ from .stepbystep import StepbyStepHandler
 from .listall import ListAllHandler
 from .index import IndexHandler
 from .games import GamesHandler
+from .paypalbalance import PayPalBalanceHandler

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Step by Step{% endblock %}
+{% block content %}
+
+<div class="portfolio">
+
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <h2>
+                Step 1. If you have a Bank of America Account, please transfer $ {{total_food_cost}} USD to Bank of America Account Number: 325065993264
+            </h2>
+            <h2>
+                Step 2. Email orsenthil@gmail.com once you have transferred. Please do this within 1 day to track your payment.
+            </h2>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+
+            <h3>
+                Step1. Log into PayPal account.
+            </h3>
+
+            <h3>
+                Step 2. Click on Money Tab and Select Send money.
+            </h3>
+
+            <h3>
+                Step 3. Select "Send Money to Family and Friends".
+            </h3>
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <img alt="Step2" src="/static/SendToFriends.png" />
+                </div>
+            </div>
+
+            <h3>
+                Step 4. Enter email address "orsenthil@gmail.com"
+            </h3>
+
+            <h3>
+                Step 5. Send ${{total_food_cost}} USD and Continue with your Transaction.
+            </h3>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
